@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.become.the.queen.HomePageController"
+            stylesheets="@stylesheet.css">
+    <top>
+        <HBox styleClass="top-bar" spacing="15">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Button fx:id="langBtn"
+                    onAction="#toggleLanguage"
+                    styleClass="lang-button">
+
+                <graphic>
+                    <TextFlow>
+                        <Text text="DE | "/>
+                        <Text text="EN" styleClass="en-part"/>
+                    </TextFlow>
+                </graphic>
+
+            </Button>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="musicToggleBtn" styleClass="music-toggle-button">
+                <graphic>
+                    <Text fx:id="musicIcon" text="🎵"/>
+                </graphic>
+            </Button>
+
+            <Slider fx:id="musicSlider"
+                    styleClass="music-slider"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" styleClass="center-menu">
+            <padding>
+                <Insets top="0" right="0" bottom="0" left="0"/>
+            </padding>
+            <Text text="BECOME THE QUEEN"
+                  styleClass="title-text"/>
+
+            <Button text="New Game"
+                    onAction="#startNewGame"
+                    styleClass="main-button"/>
+
+            <Button text="Continue"
+                    onAction="#continueGame"
+                    styleClass="main-button"/>
+
+            <Button text="Settings"
+                    onAction="#openSettings"
+                    styleClass="main-button"/>
+
+            <Button text="Credits"
+                    onAction="#openCredits"
+                    styleClass="main-button"/>
+        </VBox>
+    </center>
+
+    <left>
+        <VBox styleClass="quit-container">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Button text="Quit"
+                    onAction="#quitGame"
+                    fx:id="quitBtn"
+                    styleClass="quit-button"/>
+        </VBox>
+    </left>
+
+    <bottom>
+        <HBox alignment="BOTTOM_RIGHT">
+            <padding>
+                <Insets top="0" right="15" bottom="15" left="0"/>
+            </padding>
+            <Text fx:id="versionText" text="v1.0.0" styleClass="version-text"/>
+        </HBox>
+    </bottom>
+</BorderPane>

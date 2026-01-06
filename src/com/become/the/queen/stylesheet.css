@@ -1,0 +1,219 @@
+.root {
+    -fx-background-color: #3E0703;
+}
+
+.top-bar {
+    -fx-spacing: 15;
+    -fx-alignment: center-left;
+}
+
+.lang-button {
+    -fx-background-color: #660B05;
+    -fx-content-display: graphic-only;
+    -fx-alignment: center;
+
+    -fx-padding: 10 10;
+    -fx-min-height: 28;
+    -fx-pref-height: 28;
+    -fx-max-height: 28;
+
+    -fx-background-radius: 6;
+}
+
+.lang-button:hover {
+    -fx-background-color: #8C1007;
+}
+
+.lang-button Text {
+    -fx-fill: #FFF0C4;
+    -fx-font-size: 14px;
+}
+
+
+.en-part {
+    -fx-font-weight: bold;
+}
+
+.music-toggle-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+    -fx-padding: 6;
+    -fx-cursor: hand;
+}
+
+.music-toggle-button Text {
+    -fx-font-size: 16px;
+    -fx-fill: #FFF0C4;
+}
+
+
+.music-slider {
+    -fx-pref-width: 130px;
+    -fx-padding: 8 15;
+    -fx-alignment: top-right;
+}
+
+.music-slider .track {
+    -fx-background-color: #660B05;
+    -fx-background-radius: 4;
+}
+
+.music-slider .track .fill {
+    -fx-background-color: #8C1007;
+    -fx-background-radius: 4;
+}
+
+.music-slider .thumb {
+    -fx-background-color: #FFF0C4;
+    -fx-background-radius: 14;
+    -fx-pref-width: 14;
+    -fx-pref-height: 14;
+}
+
+.title-text {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-fill: #FFF0C4;
+    -fx-text-alignment: center;
+}
+
+.center-menu {
+    -fx-spacing: 20;
+}
+
+.main-button {
+    -fx-background-color: #660B05;
+    -fx-spacing: 20;
+    -fx-text-fill: #FFF0C4;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-min-width: 240px;
+    -fx-background-radius: 8;
+}
+
+.main-button:hover {
+    -fx-background-color: #8C1007;
+}
+
+.quit-container {
+    -fx-alignment: bottom-left;
+}
+
+.quit-button {
+    -fx-background-color: #660B05;
+    -fx-text-fill: #FFF0C4;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6;
+    -fx-padding: 8 14;
+    -fx-alignment: left;
+}
+
+.quit-button:hover {
+    -fx-background-color: #8C1007;
+}
+
+.version-text {
+    -fx-fill: #FFF0C4;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.level-card {
+    -fx-background-color: #660B05;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-alignment: center;
+    -fx-spacing: 10;
+    -fx-min-width: 180;
+    -fx-min-height: 220;
+}
+
+.level-card:hover {
+    -fx-background-color: #8C1007;
+}
+
+.level-number {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-fill: #FFF0C4;
+}
+
+.level-title {
+    -fx-font-size: 16px;
+    -fx-fill: #FFF0C4;
+}
+
+.level-icons {
+    -fx-font-size: 20px;
+    -fx-fill: #FFF0C4;
+}
+
+.level-card {
+    -fx-background-color: #660B05;
+    -fx-background-radius: 8;
+    -fx-alignment: center;
+    -fx-spacing: 5;
+    -fx-padding: 10;
+    -fx-cursor: hand;
+}
+
+.level-card:hover {
+    -fx-background-color: #8C1007;
+}
+
+.locked {
+    -fx-opacity: 0.5;
+}
+
+.lock-icon {
+    -fx-font-size: 64px;
+    -fx-fill: #FFF0C4;
+}
+
+.battlefield {
+    -fx-background-color: #FFF0C4;
+    -fx-background-radius: 6;
+}
+
+.player-piece {
+    -fx-font-size: 32px;
+    -fx-fill: #660B05;
+    -fx-font-weight: bold;
+}
+
+.enemy-piece {
+    -fx-font-size: 28px;
+    -fx-fill: #3E0703;
+}
+
+.enemy-health {
+    -fx-accent: #FF6A4D;
+}
+
+.boss-health {
+    -fx-accent: #FF6A4D;
+}
+
+.action-button {
+    -fx-background-color: #660B05;
+    -fx-text-fill: #FFF0C4;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-min-width: 140px;
+    -fx-background-radius: 8;
+}
+
+.action-button:hover {
+    -fx-background-color: #8C1007;
+}
+
+.vs-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #8C1007;
+}
+
+.on-screen-text {
+    -fx-text-fill: #FFF0C4;
+    -fx-fill: #FFF0C4;
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.become.the.queen.InGameViewBishopController"
+            stylesheets="@stylesheet.css">
+
+    <top>
+        <HBox spacing="15" styleClass="top-bar">
+
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Button text="Menu"
+                    onAction="#toggleMenu"
+                    styleClass="main-button"/>
+            <Label text="ELO-Points:" styleClass="on-screen-text"/>
+            <ProgressBar prefWidth="300" progress="0.15"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="musicToggleBtn" styleClass="music-toggle-button">
+                <graphic>
+                    <Text text="🎵"/>
+                </graphic>
+            </Button>
+            <Slider prefWidth="120" styleClass="music-slider"/>
+            <Button text="⛶" styleClass="icon-button"/>
+        </HBox>
+
+    </top>
+
+    <center>
+        <Pane styleClass="battlefield">
+            <VBox fx:id="sideMenu"
+                  prefWidth="220"
+                  styleClass="side-menu"
+                  visible="false"
+                  managed="false">
+                <Button text="Resume" onAction="#toggleMenu" styleClass="main-button"/>
+                <Button text="Level Select" onAction="#goToLevelSelect" styleClass="main-button"/>
+                <Button text="Quit" onAction="#quitGame" styleClass="main-button"/>
+            </VBox>
+
+            <ProgressBar layoutX="450" layoutY="30"
+                         prefWidth="400"
+                         progress="0.65"
+                         styleClass="boss-health"/>
+
+            <VBox layoutX="120" layoutY="260" alignment="CENTER">
+                <Text text="♙" styleClass="player-piece"/>
+                <Text text="BOB"/>
+            </VBox>
+
+            <VBox layoutX="600" layoutY="180" alignment="CENTER" spacing="4">
+                <ProgressBar layoutX="50" layoutY="5"
+                             prefWidth="50"
+                             prefHeight="10"
+                             progress="1"
+                             styleClass="enemy-health"/>
+                <Text text="♗" styleClass="enemy-piece"/>
+            </VBox>
+
+            <VBox layoutX="680" layoutY="260" alignment="CENTER" spacing="4">
+                <ProgressBar layoutX="50" layoutY="5"
+                             prefWidth="50"
+                             prefHeight="10"
+                             progress="1"
+                             styleClass="enemy-health"/>
+                <Text text="♗" styleClass="enemy-piece"/>
+            </VBox>
+        </Pane>
+    </center>
+
+    <bottom>
+        <HBox spacing="30">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <GridPane hgap="15" vgap="15">
+                <Button text="Attack" styleClass="action-button" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Button text="Block" styleClass="action-button" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Button text="Items" styleClass="action-button" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <Button text="Run" styleClass="action-button" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <VBox spacing="10">
+                <Label text="Life-Points: 40/50" styleClass="on-screen-text"/>
+                <ProgressBar prefWidth="200" progress="0.8"/>
+                <Label text="Stamina: 23/30" styleClass="on-screen-text"/>
+                <ProgressBar prefWidth="200" progress="0.75"/>
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <VBox alignment="CENTER_RIGHT" spacing="5">
+                <Text text="VS" styleClass="vs-text"/>
+                <Text text="UNDEFEATABLE BISHOPS" styleClass="on-screen-text"/>
+                <Text text="OF THE UNDYING KING" styleClass="on-screen-text"/>
+            </VBox>
+        </HBox>
+    </bottom>
+</BorderPane>
