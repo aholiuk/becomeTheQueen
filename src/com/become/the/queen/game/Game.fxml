@@ -7,8 +7,8 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/25"
         xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="com.become.the.queen.InGameViewPawnController"
-        stylesheets="@stylesheet.css">
+        fx:controller="com.become.the.queen.game.GameController"
+        stylesheets="@../resources/css/stylesheet.css">
 
     <top>
         <HBox spacing="15" styleClass="top-bar">

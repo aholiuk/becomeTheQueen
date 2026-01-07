@@ -14,7 +14,7 @@
 <BorderPane xmlns="http://javafx.com/javafx/25"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.become.the.queen.NewGameController"
-            stylesheets="@stylesheet.css">
+            stylesheets="@resources/css/stylesheet.css">
 
     <top>
         <HBox styleClass="top-bar" spacing="15">

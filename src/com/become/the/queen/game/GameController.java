@@ -1,18 +1,17 @@
-package com.become.the.queen;
+package com.become.the.queen.game;
 
+import com.become.the.queen.app.SceneManager;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javafx.scene.layout.*;
 import javafx.util.Duration;
 
 import java.io.IOException;
 
-public class InGameViewPawnController {
+public class GameController {
+
+  private static SceneManager scene = new SceneManager();
 
   @FXML private VBox sideMenu;
   private boolean menuOpen = false;
@@ -46,18 +45,6 @@ public class InGameViewPawnController {
 
   @FXML
   public void goToLevelSelect(ActionEvent event) throws IOException {
-    switchScene(event, "LevelSelect.fxml");
-  }
-
-  @FXML
-  private void switchScene(ActionEvent event, String fxmlFile) throws IOException {
-    Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-    FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
-    Scene scene = new Scene(loader.load());
-
-    stage.setScene(scene);
-    stage.hide();
-    stage.setMaximized(true);
-    stage.show();
+    scene.switchScene(event, "LevelSelect.fxml");
   }
 }
